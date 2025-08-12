@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="24dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/pdf_item_bg"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <!--ImageView: Show thumbnail of PDF document i.e, first page of PDF documents-->
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/pdf_item_image_bg"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:id="@+id/mainthumbnailIv">
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/thumbnailIv"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:padding="3dp"-->
+            <!--                android:src="@drawable/ic_launcher_background" />-->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:paddingTop="1.5dp"
+                android:id="@+id/thumbnailIv"
+                android:src="@mipmap/ic_launcher"
+                app:shapeAppearance="@style/CornerCut_item"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="11dp"
+            android:background="@drawable/pdf_item_name_bg"
+            android:text="PDF"
+            android:gravity="center"
+            android:textSize="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/mainthumbnailIv"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/mainthumbnailIv">
+
+            <TextView
+                android:id="@+id/pdfFileName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/un_select_signature_color"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/_12ssp"
+                android:text="PDF Name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/pdfFileName">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_8ssp"
+                    android:textColor="@color/favrarte_prview_icon"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="PDF" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:text="|"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/favrarte_prview_icon"
+                    android:gravity="center_vertical"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/sizeTv"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_8ssp"
+                    android:textColor="@color/favrarte_prview_icon"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="6.3 MB" />
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:text="|"
+                    android:textColor="@color/favrarte_prview_icon"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/favrarte_prview_icon"
+                    android:text="18 Nov, 10:35AM" />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+        <!--        android:button="@drawable/custom_checkbox"-->
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_11ssp"
+            style="@style/MyCheckboxStyle"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+
+        <CheckBox
+            android:id="@+id/pdfCheckBox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            style="@style/MyCheckboxStyle"
+            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/sharemoreLayout"
+            android:layout_marginBottom="10dp"
+
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/shareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="7dp"
+                android:src="@drawable/share_icon" />
+
+            <ImageButton
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:src="@drawable/more_icon" />
+
+
+            <TextView
+                android:id="@+id/dateTv"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moreBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:text="dd/MM/yyyy" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

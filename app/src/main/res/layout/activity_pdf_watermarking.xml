@@ -1,0 +1,266 @@
+<!-- res/layout/activity_pdf_watermarking.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Select PDF Button -->
+        <Button
+            android:id="@+id/selectPdfButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select PDF File" />
+
+        <!-- Watermark Type Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watermark Type" />
+
+        <RadioGroup
+            android:id="@+id/watermarkTypeGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/textWatermarkOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text" />
+            <RadioButton
+                android:id="@+id/imageWatermarkOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image" />
+        </RadioGroup>
+
+        <!-- Watermark Text Input (visible when Text option is selected) -->
+        <EditText
+            android:id="@+id/watermarkEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Watermark Text"
+            android:visibility="gone" />
+
+        <!-- Select Image Button (visible when Image option is selected) -->
+        <Button
+            android:id="@+id/selectImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image File"
+            android:visibility="gone" />
+
+        <!-- Font Size Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font Size" />
+        <SeekBar
+            android:id="@+id/fontSizeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="72"
+            android:progress="20" />
+        <TextView
+            android:id="@+id/fontSizeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 pt" />
+
+        <!-- Transparency Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transparency" />
+        <SeekBar
+            android:id="@+id/transparencySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50" />
+        <TextView
+            android:id="@+id/transparencyValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50%" />
+
+        <!-- Rotation Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rotation" />
+        <SeekBar
+            android:id="@+id/rotationSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="360"
+            android:progress="0" />
+        <TextView
+            android:id="@+id/rotationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0°" />
+
+        <!-- Color Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text Color" />
+        <RadioGroup
+            android:id="@+id/colorGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Black" />
+            <RadioButton
+                android:id="@+id/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="White" />
+            <RadioButton
+                android:id="@+id/colorRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red" />
+            <RadioButton
+                android:id="@+id/colorDarkBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dark Blue" />
+        </RadioGroup>
+
+        <!-- Font Type Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font Type" />
+        <Spinner
+            android:id="@+id/fontTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/font_type_array" />
+
+        <!-- Font Style Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font Style" />
+        <RadioGroup
+            android:id="@+id/fontStyleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/fontRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular" />
+            <RadioButton
+                android:id="@+id/fontBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bold" />
+            <RadioButton
+                android:id="@+id/fontItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italic" />
+        </RadioGroup>
+
+        <!-- Position Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vertical Position" />
+        <RadioGroup
+            android:id="@+id/verticalPositionGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/positionTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top" />
+            <RadioButton
+                android:id="@+id/positionMiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Middle" />
+            <RadioButton
+                android:id="@+id/positionBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bottom" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horizontal Position" />
+        <RadioGroup
+            android:id="@+id/horizontalPositionGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/positionLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Left" />
+
+            <RadioButton
+                android:id="@+id/positionCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Center" />
+
+            <RadioButton
+                android:id="@+id/positionRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Right" />
+        </RadioGroup>
+
+        <!-- Page Range Section -->
+        <EditText
+            android:id="@+id/startPageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Page"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/endPageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Page"
+            android:inputType="number" />
+
+        <!-- Add Watermark Button -->
+        <Button
+            android:id="@+id/addWatermarkBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Watermark" />
+
+        <!-- RecyclerView to display saved PDF files -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>

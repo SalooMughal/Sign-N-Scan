@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/toolbar_updated_bg_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:background="@drawable/pdf_search_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_icon_red"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="21dp"/>
+
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:hint="Search documents here"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/searchEditText"
+                android:paddingTop="3dp"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="#525252"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@null"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel_icon"
+                android:id="@+id/searchBackBtn"
+                android:layout_marginEnd="21dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/clearButton"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Selected"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#3D3C3F"
+            android:textSize="@dimen/_17ssp"
+            android:paddingStart="18dp"
+            android:visibility="gone"
+            android:id="@+id/toolbarSelectedItem"/>
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="SignNScan"-->
+        <!--            android:layout_marginStart="20dp"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:textColor="@color/red"-->
+        <!--            android:textSize="@dimen/_17ssp"-->
+        <!--            android:id="@+id/toolbarTitle"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24ssp"
+            android:id="@+id/toolbarTitle"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SignNScan"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_18ssp"
+                android:id="@+id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:includeFontPadding="false"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="@dimen/_41sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/main_home_icon"
+                android:text="PDF"
+                app:layout_constraintStart_toEndOf="@+id/name"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:textSize="@dimen/_13ssp"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                />
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="2dp"-->
+<!--                android:paddingTop="2dp"-->
+<!--                android:src="@drawable/pdf_icon"-->
+<!--                />-->
+<!--&lt;!&ndash;            android:src="@drawable/pdf_text_icon"&ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="2dp"-->
+<!--                android:src="@drawable/main_home_icon"-->
+<!--                />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal">
+
+
+            <!--                <ImageButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:background="@android:color/transparent"-->
+            <!--                    android:padding="8dp"-->
+            <!--                    android:layout_gravity="center_vertical"-->
+            <!--                    android:id="@+id/allSelctedItemBtn"-->
+            <!--                    android:layout_marginEnd="11dp"-->
+            <!--                    android:src="@drawable/selection_item" />-->
+
+
+
+
+
+
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/search_icon" />
+
+
+
+            <ImageButton
+                android:id="@+id/favBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/favrarte_selected_icon" />
+
+            <ImageButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/main_delete_icon" />
+
+
+            <TextView
+                android:id="@+id/allSelctedItemBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_un_select_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="2dp"
+                android:visibility="invisible"
+                android:text="@string/select"
+                android:textColor="@color/select_text_un_selected"
+                android:textSize="@dimen/_10ssp"
+
+                />
+
+            <ImageButton
+                android:id="@+id/settingBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@drawable/setting_icon" />
+
+        </LinearLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintHeight_percent="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainRalativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintHeight_percent="0.79"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabsMainLayout">
+
+            <ImageButton
+                android:id="@+id/fileSortingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/sorting_icon" />
+
+            <ImageButton
+                android:id="@+id/fileListOrGridBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/list_view_icon" />
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tabPaddingStart="5dp"
+                app:tabRippleColor="@null"
+                app:tabPaddingEnd="0dp"
+                android:background="@color/white"
+                app:tabIndicator="@null"
+                android:layout_marginLeft="13dp"
+                app:tabMode="scrollable"
+                app:tabGravity="start"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/black" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <!--        <androidx.viewpager.widget.ViewPager-->
+        <com.pixelz360.docsign.imagetopdf.creator.NonSwipeableViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabsMainLayout"
+            android:background="@null" />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
+        android:id="@+id/homeBannerAdsLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:weightSum="0.9"
+        android:orientation="vertical"
+        android:id="@+id/navigationLayout"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_color1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintHeight_percent="0.10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:weightSum="0.9"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:id="@+id/homeLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mainHome"
+                    android:gravity="center">
+
+                    <!--                android:background="@drawable/selected_main_icon_bg"-->
+
+
+                    <!--                    <ImageView-->
+                    <!--                        android:layout_width="25dp"-->
+                    <!--                        android:layout_height="25dp"-->
+                    <!--                        android:id="@+id/imageHome"-->
+                    <!--                        android:src="@drawable/home_one_icon" />-->
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/imageHome"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:lottie_rawRes="@raw/main_home"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/home"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/action_main_icon_color"
+                    android:textSize="@dimen/_8ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.18"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/add_icon"
+                    android:backgroundTint="@color/red"
+                    app:layout_anchorGravity="center|bottom"
+                    android:contentDescription="TODO" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:id="@+id/toolsLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/un_selected_main_icon_bg"
+                    android:id="@+id/mainToolsLayout"
+                    android:gravity="center">
+                    <!--                    <ImageView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:id="@+id/toolsIcon"-->
+                    <!--                        android:src="@drawable/action_icon"-->
+                    <!--                        />-->
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/toolsIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:lottie_rawRes="@raw/main_tools"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolsText"
+                    android:textColor="@color/action_main_icon_color"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/_8ssp"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/tools"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:id="@+id/settingLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/un_selected_main_icon_bg"
+                    android:id="@+id/mainSetting"
+                    android:gravity="center">
+                    <!--                    <ImageView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:id="@+id/settingIcon"-->
+                    <!--                        android:src="@drawable/setting_icon"-->
+                    <!--                        />-->
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/settingIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:lottie_rawRes="@raw/main_settings"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/settingText"
+                    android:textColor="@color/action_main_icon_color"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/_8ssp"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/settings"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:id="@+id/premiumLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/un_selected_main_icon_bg"
+                    android:id="@+id/mainPremium"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/premiumProfileImage"
+                        android:src="@drawable/premium_bootom_icon"
+                        />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/premiumText"
+                    android:textColor="@color/action_main_icon_color"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="true"
+                    android:text="@string/premium"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

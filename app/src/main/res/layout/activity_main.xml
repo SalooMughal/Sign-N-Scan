@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Button to Load PDF -->
+    <Button
+        android:id="@+id/load_pdf_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load PDF"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText for Search Text -->
+    <EditText
+        android:id="@+id/edit_text_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text to search"
+        android:layout_marginBottom="8dp"
+        android:inputType="text" />
+
+    <!-- EditText for Replace Text -->
+    <EditText
+        android:id="@+id/edit_text_replace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text to replace with"
+        android:layout_marginBottom="16dp"
+        android:inputType="text" />
+
+    <!-- Button to Save Edited PDF -->
+    <Button
+        android:id="@+id/save_pdf_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save PDF" />
+
+</LinearLayout>

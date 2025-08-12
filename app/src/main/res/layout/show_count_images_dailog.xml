@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/dailog_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prepare_your_selected_media"
+        android:fontFamily="@font/gilroy_bold"
+        android:textColor="@color/splash_bg_color"
+        android:textSize="@dimen/_17ssp"
+        android:layout_marginTop="27dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/title"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/selected_media_loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_8_of_11_ready"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center_horizontal"
+        android:textColor="@color/toolbar_title_color"
+        android:textSize="@dimen/_14ssp"
+
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/contentMedia"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="horizontal"
+        android:layout_marginTop="22dp">
+
+
+
+
+        <TextView
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:text="@string/cancel"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="#878787"
+            android:gravity="center"
+            android:fontFamily="@font/gilroy_medium"
+            android:id="@+id/selectedMediaCancelBtn"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

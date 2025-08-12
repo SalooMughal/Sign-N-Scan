@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="30dp"
+    android:viewportWidth="36"
+    android:viewportHeight="30">
+  <path
+      android:pathData="M15,0L21,0A15,15 0,0 1,36 15L36,15A15,15 0,0 1,21 30L15,30A15,15 0,0 1,0 15L0,15A15,15 0,0 1,15 0z"
+      android:fillColor="@color/action_pdf_icon_bf"/>
+  <path
+      android:strokeWidth="1"
+      android:pathData="M24.14,9.004L24.141,9.004C25.016,9.503 25.7,10.365 25.923,11.484C26.145,12.601 25.917,14.028 24.862,15.665C24.763,15.811 22.711,18.785 18,21.454C13.361,18.828 11.344,15.975 11.137,15.669C10.083,14.03 9.856,12.602 10.077,11.485C10.3,10.365 10.984,9.503 11.859,9.004L11.86,9.004C12.432,8.676 13.103,8.5 13.799,8.5C15.175,8.5 16.508,9.187 17.544,10.501L17.607,10.581C17.702,10.702 17.847,10.772 18,10.772C18.153,10.772 18.298,10.702 18.393,10.581L18.456,10.501C18.456,10.501 18.456,10.501 18.456,10.501C19.49,9.187 20.823,8.5 22.199,8.5C22.895,8.5 23.566,8.676 24.14,9.004Z"
+      android:strokeLineJoin="round"
+      android:fillColor="@color/transparent"
+      android:strokeColor="@color/black"/>
+</vector>

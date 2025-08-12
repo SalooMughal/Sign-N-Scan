@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/mainlayout"
+>
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintHeight_percent="0.15"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:background="@drawable/toolbar_updated_bg_2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="46dp"-->
+<!--            android:layout_marginEnd="18dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="1"-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/searchLayout"-->
+<!--            android:background="@drawable/pdf_item_bg">-->
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/search_icon_red"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="21dp"/>-->
+
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="0.9"-->
+<!--                android:layout_marginStart="38dp"-->
+<!--                android:hint="@string/search_document"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:id="@+id/searchEditText"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:background="@null"/>-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/cancel_icon"-->
+<!--                android:id="@+id/searchBackBtn"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="18dp"/>-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/back_btn"-->
+<!--                android:id="@+id/clearButton"-->
+<!--                android:paddingTop="8dp"-->
+<!--                android:paddingBottom="8dp"-->
+<!--                android:visibility="gone"-->
+<!--            />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=" Selected"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:textColor="#3D3C3F"-->
+<!--                android:textSize="@dimen/_17ssp"-->
+<!--                android:paddingStart="18dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:id="@+id/toolbarSelectedItem"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/docsign"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:textColor="@color/main_toolbar_title"-->
+<!--                android:textSize="@dimen/_17ssp"-->
+<!--                android:id="@+id/toolbarTitle"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:layout_marginEnd="18dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--&lt;!&ndash;                <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:background="@android:color/transparent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_gravity="center_vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/allSelctedItemBtn"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginEnd="11dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:src="@drawable/selection_item" />&ndash;&gt;-->
+
+
+
+
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/fileSortingBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:src="@drawable/sorting_icon" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/searchBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:src="@drawable/search_icon" />-->
+
+
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/favBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_marginEnd="11dp"-->
+<!--                    android:src="@drawable/favrarte_selected_icon" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/deleteBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_marginEnd="11dp"-->
+<!--                    android:src="@drawable/main_delete_icon" />-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/allSelctedItemBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:background="@drawable/btn_un_select_bg"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="12dp"-->
+<!--                    android:paddingEnd="12dp"-->
+<!--                    android:text="@string/select"-->
+<!--                    android:textColor="@color/select_text_un_selected"-->
+<!--                    android:textSize="@dimen/_10ssp"-->
+
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/childLayout">
+
+<!--        app:layout_constraintHeight_percent="0.14"-->
+
+<!--        android:background="@drawable/home_fragment_child_bg"-->
+
+
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:scrollbarThumbHorizontal="@color/light_gry"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+
+<!--            >-->
+
+
+
+
+
+
+<!--        </HorizontalScrollView>-->
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scanFilesCount"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all_files"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_14ssp"
+                android:id="@+id/scannerName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Files"
+                android:textColor="#828282"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_11ssp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/allCountFiles"/>
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    app:layout_constraintHeight_percent="0.77"-->
+
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        app:layout_constraintHeight_percent="0.97"
+        app:layout_constraintTop_toBottomOf="@+id/childLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_data_icon" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/no_files_yet"
+            android:textColor="#3D3C3F"
+            android:textSize="@dimen/_17ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/import_images_or_scan_with_your_camera_to_generate_pdfs"
+            android:textColor="#3D3C3F"
+            android:textSize="@dimen/_11ssp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.74"
+        app:layout_constraintTop_toBottomOf="@+id/childLayout"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/emptyLayoutRecyclerviewItem"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_search_data_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_17ssp"
+            android:textColor="#3D3C3F"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_any_document_here"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="#3D3C3F"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pdfRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/childLayout"
+        tools:listitem="@layout/pdf_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

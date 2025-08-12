@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".SettingActivity">
+
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/backButton"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priview"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_19ssp"
+            android:visibility="gone"
+            android:textColor="@color/toolbar_title_color"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/nextBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/privew_image_bg"
+
+        android:orientation="vertical">
+
+
+
+<!--        <com.google.android.material.imageview.ShapeableImageView-->
+<!--            android:layout_width="123dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:id="@+id/image"-->
+<!--            android:src="@mipmap/ic_launcher"-->
+<!--            android:layout_marginTop="29dp"-->
+<!--            app:shapeAppearance="@style/CornerCut"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--             />-->
+<!--        -->
+
+
+        <!--ImageView: Show thumbnail of PDF document i.e, first page of PDF documents-->
+
+<!--        android:layout_width="65dp"-->
+<!--        android:layout_height="60dp"-->
+
+        <LinearLayout
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="34dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:id="@+id/mainthumbnailIv">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="2dp"
+                android:id="@+id/image"
+                android:src="@mipmap/ic_launcher"
+                app:shapeAppearance="@style/CornerCut"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="123dp"
+            android:layout_height="11dp"
+            android:background="@drawable/pdf_item_name_bg"
+            android:text="PDF"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/mainthumbnailIv"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit File Name"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/filter_text_color"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/_8ssp"
+            android:gravity="right"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="17dp"
+            android:layout_gravity="center_vertical"
+        />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+           >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:text="File Name sdfdsfs fs fsdfs df dsf sdf sdf fsdf ds fsd f sdf"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/filter_text_color"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:textSize="@dimen/_12ssp"
+                android:id="@+id/fileName"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_file_icon"
+                android:layout_gravity="right"
+                android:id="@+id/editFile"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EDEDED"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="22dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="47dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/folder_icon"
+                android:layout_marginStart="17dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location: Storage/Documents/Image to Pdf /Internal Storage/Documents/Image to Pdf /Internal Storage/Documents/Image to Pdf"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/red"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textSize="@dimen/_8ssp"
+                android:paddingEnd="39dp"
+
+                android:id="@+id/location"/>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:text="@string/view_file"
+                android:textSize="@dimen/_13ssp"
+                android:background="@drawable/btn_add_text_ok_bg"
+                android:textColor="@color/white_both_white"
+                android:gravity="center"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:id="@+id/viewFileBtn"
+                android:paddingTop="12dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginEnd="33dp"
+                android:paddingBottom="10dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/delete_privew_icon"
+                    android:id="@+id/deleteBtn"/>
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/share_privew_icon"
+                    android:layout_marginStart="19dp"
+                    android:id="@+id/shareBtn"/>
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/previiew_home_icon"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/homeBtn"/>
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/favoraite_privew_icon"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/favrateBtn"
+                    app:tint="#838383" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:id="@+id/adViewlayout"-->
+<!--        android:gravity="center"-->
+<!--        >-->
+
+<!--        &lt;!&ndash; AdView for Banner Ads &ndash;&gt;-->
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            android:id="@+id/adView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            ads:adSize="BANNER"-->
+<!--            ads:adUnitId="@string/prview_screen_banner_ad" />-->
+
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

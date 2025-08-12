@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+<!--        &lt;!&ndash; Internal cache path &ndash;&gt;-->
+<!--        <cache-path-->
+<!--            name="cache"-->
+<!--            path="." />-->
+
+<!--        &lt;!&ndash; External storage path &ndash;&gt;-->
+<!--        <external-path-->
+<!--            name="external_files"-->
+<!--            path="." />-->
+
+<!--        &lt;!&ndash; Internal files path &ndash;&gt;-->
+<!--        <files-path-->
+<!--            name="internal_files"-->
+<!--            path="DigitalSignature/" />-->
+
+<!--        &lt;!&ndash; Shared images in cache &ndash;&gt;-->
+<!--        <cache-path-->
+<!--            name="shared_images"-->
+<!--            path="images/" />-->
+
+<!--        &lt;!&ndash; General external path &ndash;&gt;-->
+<!--        <external-path-->
+<!--            name="external"-->
+<!--            path="." />-->
+
+<!--        &lt;!&ndash; External files path &ndash;&gt;-->
+<!--        <external-files-path-->
+<!--            name="external_files"-->
+<!--            path="." />-->
+
+<!--        &lt;!&ndash; External cache path &ndash;&gt;-->
+<!--        <external-cache-path-->
+<!--            name="external_cache"-->
+<!--            path="." />-->
+
+<!--        &lt;!&ndash; General internal files path &ndash;&gt;-->
+<!--        <files-path-->
+<!--            name="files"-->
+<!--            path="." />-->
+
+
+
+
+
+
+
+        <cache-path name="cache" path="." />
+
+    <!-- External storage path -->
+    <external-path
+        name="external_files"
+        path="." />
+
+    <!-- Internal files path -->
+    <files-path
+        name="internal_files"
+        path="DigitalSignature/" />
+
+    <cache-path name="shared_images" path="images/"/>
+
+    <external-path name="external_downloads" path="Download/" />
+
+    <external-files-path
+        name="images"
+        path="Pictures/" />
+</paths>

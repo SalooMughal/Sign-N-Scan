@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/backButton"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/compress_pdf"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="false"
+            android:textColor="@color/main_toolbar_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbarTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.90"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/selectPdfButton"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="Select PDF to Compress" />
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/black"
+        android:text="Compression level amount"
+        android:layout_marginHorizontal="@dimen/_18sdp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:hintEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:boxStrokeColor="@color/red"
+                app:boxStrokeErrorColor="@android:color/holo_red_dark"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/red" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/clearTextIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/clear_icon"
+                android:contentDescription="Clear text"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/infoTextQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/red"
+            android:text="Compression level amount"
+            android:layout_marginHorizontal="@dimen/_18sdp"/>
+
+<!--    <EditText-->
+<!--        android:labelFor="@id/infoText"-->
+<!--        android:id="@+id/pages"-->
+<!--        android:hint="@string/prompt_input"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_30sdp"-->
+<!--        android:maxLines="1"-->
+<!--        android:maxLength="3"-->
+<!--        android:textSize="@dimen/_12sdp"-->
+<!--        android:inputType="number"-->
+<!--        android:layout_marginHorizontal="@dimen/_15sdp"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/compressPdfButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Pdf Compress" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:text="@string/compress_pdf"
+        android:textSize="@dimen/_13ssp"
+        android:background="@drawable/btn_add_text_ok_bg"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:id="@+id/compressPdfButton"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:paddingTop="3dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

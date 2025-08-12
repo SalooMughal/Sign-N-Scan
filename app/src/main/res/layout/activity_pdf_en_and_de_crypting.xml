@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".SettingActivity"
+       >
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/backButton"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lock PDF"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="false"
+            android:textColor="@color/main_toolbar_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbarTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!-- Button to Select PDF File -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.90"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_marginTop="@dimen/_9ssp"
+            android:background="@drawable/language_unselected_item_bg"
+            >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Filename.PDF"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/filePathTextView"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:layout_width="89dp"
+                android:layout_height="42dp"
+                android:text="Select File"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/btn_select_file_bg"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:id="@+id/selectPdfButton"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                />
+
+
+        </RelativeLayout>
+
+        <!-- EditText for Password Input -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9ssp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:boxStrokeColor="@color/red"
+                app:boxStrokeErrorColor="@android:color/holo_red_dark"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Enter Password"
+                    android:background="@drawable/language_unselected_item_bg"
+
+                    android:inputType="number"
+                    android:textColorHint="@color/red"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <!-- Encrypt PDF Button -->
+
+
+
+
+
+
+        <!-- Decrypt PDF Button -->
+        <Button
+            android:id="@+id/decryptPdfBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Decrypt PDF"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Decrypt PDF Button -->
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Go Home"
+            android:layout_marginBottom="16dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:text="Encrypt PDF"
+        android:textSize="@dimen/_13ssp"
+        android:background="@drawable/btn_add_text_ok_bg"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:id="@+id/encryptPdfBtn"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:paddingTop="3dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

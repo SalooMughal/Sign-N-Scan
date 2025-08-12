@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".SettingActivity">
+
+
+        <!-- Toolbar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbar">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back_btn"
+                android:id="@+id/backButton"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generate_qr_code"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/toolbar_title_color"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/nextBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="14dp"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.89"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            >
+
+            <!-- Text Field for User Input -->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextLayout"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/editTextInput"
+                    android:hint="@string/enter_your_details"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginEnd="@dimen/_20ssp"
+                    android:layout_marginStart="@dimen/_20ssp"
+                    android:background="@drawable/qr_code_editext_un_selected"/>
+
+                <ImageView
+                    android:id="@+id/clearTextIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_25ssp"
+                    android:src="@drawable/clear_code_icon"
+                    android:contentDescription="Clear text"
+                    />
+
+            </RelativeLayout>
+
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/editTextInput"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:hint="@string/enter_phone_number_email_website_link_etc"-->
+            <!--        android:textColorHint="@android:color/darker_gray"-->
+            <!--        android:inputType="text"-->
+            <!--        android:layout_marginTop="16dp" />-->
+
+            <!-- Generate Button -->
+
+
+            <!-- QR Code Image Display -->
+            <ImageView
+                android:id="@+id/imageViewQRCode"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="154dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="28dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:text="Generate QR Code"
+                    android:textSize="@dimen/_13ssp"
+                    android:background="@drawable/btn_add_text_ok_bg"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginRight="18dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:id="@+id/buttonGenerate"
+                    android:includeFontPadding="false"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38ssp"
+                    android:background="@drawable/btn_share_ok_bg"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_above="@+id/buttonGenerate"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="@dimen/_8ssp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/buttonShare"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/share_icon"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_38sdp"
+                        android:text="@string/share"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/item_share_icon_color"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="10dp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

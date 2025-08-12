@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/list_view_grid_view_layout_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+
+
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@drawable/sort_first_layout_bg"
+     android:orientation="vertical">
+
+
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="45dp"
+         android:id="@+id/setListViewBtn"
+         android:layout_marginTop="10dp"
+         android:layout_gravity="center_vertical"
+         android:orientation="horizontal">
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="14dp"
+             android:src="@drawable/list_view_dailog_icon"
+             android:id="@+id/createDateIcon"/>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginStart="11dp"
+             android:gravity="center_vertical"
+             android:layout_toRightOf="@+id/createDateIcon"
+             android:orientation="vertical">
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/list_view"
+                 android:fontFamily="@font/poppins_regular"
+                 android:includeFontPadding="false"
+                 android:textColor="@color/filter_text_color"
+                 android:textSize="@dimen/_12ssp"
+                 />
+
+
+
+
+
+         </LinearLayout>
+
+
+
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="45dp"
+         android:layout_gravity="center_vertical"
+         android:id="@+id/setGridViewBtn"
+         android:gravity="center"
+         android:layout_marginBottom="10dp"
+         android:orientation="horizontal">
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="14dp"
+             android:src="@drawable/grid_view_dailog_icon"
+             android:id="@+id/fileSizeIcon"/>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="11dp"
+             android:paddingEnd="44dp"
+             android:layout_centerVertical="true"
+             android:layout_toRightOf="@+id/fileSizeIcon"
+             android:orientation="vertical">
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/image_view"
+                 android:fontFamily="@font/poppins_regular"
+                 android:includeFontPadding="false"
+                 android:textColor="@color/filter_text_color"
+                 android:textSize="@dimen/_12ssp"
+                 />
+
+
+
+
+         </LinearLayout>
+
+
+
+     </RelativeLayout>
+
+
+ </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

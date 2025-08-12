@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".SettingActivity">
+
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/backButton"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_19ssp"
+            android:textColor="@color/main_toolbar_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/nextBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:id="@+id/setVibration"
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Add"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/toolbar_title_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+       />
+
+
+
+<!--            <androidx.appcompat.widget.SwitchCompat-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:id="@+id/isRemoveAdsEnabled"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:layout_marginEnd="8dp" />-->
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:track="@drawable/track_selector_setting"
+                android:thumb="@drawable/thumb_icon_setting"
+                app:trackTint="@null"
+                app:thumbTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/isRemoveAdsEnabled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/share_apps"
+
+            >
+
+            <ImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/share_app_icon" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconImageView"
+                android:text="@string/share_app"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/rate_us"
+            >
+
+            <ImageView
+                android:id="@+id/iconImageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/rate_us_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconImageView1"
+                android:text="@string/rate_us"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible"
+            android:id="@+id/language">
+
+            <ImageView
+                android:id="@+id/languageIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/language_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/languageIcon"
+                android:text="@string/language"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:paddingEnd="8dp"
+                android:src="@drawable/default_language_icon" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:id="@+id/setMode"
+            >
+
+            <ImageView
+                android:id="@+id/dark_Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:src="@drawable/dark_mode_icon" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Mode"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/toolbar_title_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dark_Icon"
+                />
+
+
+
+            <!--            <androidx.appcompat.widget.SwitchCompat-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:checked="true"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                android:id="@+id/themeSwitch"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:layout_marginEnd="8dp" />-->
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:track="@drawable/track_selector_setting"
+                android:thumb="@drawable/thumb_icon_setting"
+                app:trackTint="@null"
+                app:thumbTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/themeSwitch"
+                android:paddingEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                 />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:id="@+id/requestNewFeaterBtn"
+            >
+
+            <ImageView
+                android:id="@+id/iconImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/language_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconImageView2"
+                android:text="@string/language_options"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:id="@+id/darkMode"
+            >
+
+            <ImageView
+                android:id="@+id/darkIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/dark_mode_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/darkIcon"
+                android:text="Dark mode"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/feadback"
+            >
+
+            <ImageView
+                android:id="@+id/iconImageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/feadback_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconImageView3"
+                android:text="@string/feedback"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/privacy_policy"
+            >
+
+            <ImageView
+                android:id="@+id/iconImageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/privacy_policy_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iconImageView4"
+                android:text="@string/privacy_policy"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/gilroy_medium"
+                android:textColor="@color/toolbar_title_color"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/remove_ad_light_mode_icon"
+            android:id="@+id/adsFree"
+            >
+
+            <ImageView
+                android:id="@+id/iconAdsfree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                 />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/app_version"
+        android:id="@+id/appVersioin"
+        android:textSize="@dimen/_13ssp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:textColor="@color/splash_bg_color"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/appVersioin"
+        android:text="1.1.1"
+        android:id="@+id/appVersioinNumber"
+        android:textSize="@dimen/_13ssp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:textColor="@color/edit_module_color_unselected"
+
+        />
+
+
+
+
+
+    <!-- AdView for Banner Ads -->
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        android:id="@+id/adView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="@string/setting_screen_banner_ad" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

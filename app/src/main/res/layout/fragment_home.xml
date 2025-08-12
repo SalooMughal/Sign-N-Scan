@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#EDEDED"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/toolbar_updated_bg_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="gone"
+            android:id="@+id/searchLayout"
+            android:background="@drawable/pdf_item_bg">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_icon_red"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="21dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:layout_marginStart="38dp"
+                android:hint="@string/search_document"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/searchEditText"
+                android:paddingTop="3dp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@null"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel_icon"
+                android:id="@+id/searchBackBtn"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="18dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/clearButton"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Selected"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#3D3C3F"
+            android:textSize="@dimen/_17ssp"
+            android:paddingStart="18dp"
+            android:visibility="gone"
+            android:id="@+id/toolbarSelectedItem"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/docsign"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/toolbar_title_color"
+            android:textSize="@dimen/_17ssp"
+            android:id="@+id/toolbarTitle"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal">
+
+
+            <!--                <ImageButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:background="@android:color/transparent"-->
+            <!--                    android:padding="8dp"-->
+            <!--                    android:layout_gravity="center_vertical"-->
+            <!--                    android:id="@+id/allSelctedItemBtn"-->
+            <!--                    android:layout_marginEnd="11dp"-->
+            <!--                    android:src="@drawable/selection_item" />-->
+
+
+
+
+
+            <ImageButton
+                android:id="@+id/fileSortingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:src="@drawable/sorting_icon" />
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/search_icon" />
+
+
+
+            <ImageButton
+                android:id="@+id/favBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/favrarte_selected_icon" />
+
+            <ImageButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/main_delete_icon" />
+
+
+            <TextView
+                android:id="@+id/allSelctedItemBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_un_select_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/select"
+                android:textColor="@color/select_text_un_selected"
+                android:textSize="@dimen/_10ssp"
+
+                />
+
+        </LinearLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/mainRalativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:tabPaddingStart="2dp"
+            app:tabRippleColor="@null"
+            app:tabPaddingEnd="8dp"
+            android:background="#EDEDED"
+            app:tabIndicator="@null"
+            app:tabMode="scrollable"
+            app:tabGravity="center"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/black" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@id/tabs"
+            android:background="@null" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

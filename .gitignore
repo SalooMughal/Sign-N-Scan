@@ -1,0 +1,7 @@
+.gradle/
+build/
+*.txt
+*.bin
+*.iml
+local.properties
+.idea/

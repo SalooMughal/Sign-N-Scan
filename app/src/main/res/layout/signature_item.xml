@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/freehanditem"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="@drawable/signiture_item_bg"
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="18dp"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <com.pixelz360.docsign.imagetopdf.creator.signiture_model.Activity.SignatureView
+        android:id="@+id/signatureview"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.pixelz360.docsign.imagetopdf.creator.signiture_model.Activity.SignatureView>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="33dp"
+        android:layout_gravity="end|center_vertical"
+        android:background="@android:color/transparent"
+        android:id="@+id/deleteSignature"
+        android:src="@drawable/delete_icon"/>
+</FrameLayout>

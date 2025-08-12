@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:id="@+id/mainLayout"
+    android:paddingBottom="64dp"
+    android:background="@drawable/file_sorting_bottom_sheet_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlock Pro Features"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_23ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="43dp"
+        android:id="@+id/title"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want access to this exclusive tool?\nChoose your way to unlock"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        android:id="@+id/subTitle"
+        android:textColor="@color/red"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pro_reworded_dailog"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="41dp"
+        android:id="@+id/icon"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintTop_toBottomOf="@+id/icon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/sub_sub_title"
+        android:textColor="#000000"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/sub_sub_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="156dp"
+            android:layout_height="@dimen/_38sdp"
+            android:text="Go Premium"
+            android:id="@+id/goProBtntv"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#131313"
+            android:layout_marginEnd="3.5dp"
+            android:background="@drawable/btn_go_pro_bg"
+            android:layout_marginTop="34dp"
+            android:gravity="center"
+            android:textSize="@dimen/_11ssp"
+            />
+
+        <TextView
+            android:layout_width="156dp"
+            android:layout_height="@dimen/_38sdp"
+            android:text="Watch ad"
+            android:id="@+id/saveBtntv"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="3.5dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white_both_white"
+            android:background="@drawable/btn_pro_bg"
+            android:layout_marginTop="34dp"
+            android:gravity="center"
+            android:textSize="@dimen/_11ssp"
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

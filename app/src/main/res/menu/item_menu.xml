@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/edit_image"
+        android:icon="@drawable/edit_image_icon"
+            android:title="Edit Image" />
+    <item
+        android:id="@+id/delete_image"
+        android:icon="@drawable/delete_image_icon"
+        android:title="Delete Image" />
+
+    <item
+        android:id="@+id/page_shuffle"
+        android:icon="@drawable/shufle_scanner_item_icon"
+        android:title="Page Shuffle"/>
+
+    <item
+        android:id="@+id/save_to_gallery"
+        android:icon="@drawable/save_to_gallery_icon"
+        android:title="Save To Gallery"/>
+
+</menu>

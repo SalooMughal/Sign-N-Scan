@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/dailog_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rename_file"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/splash_bg_color"
+        android:textSize="@dimen/_13ssp"
+        android:layout_marginTop="27dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/title"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:boxStrokeColor="@color/red"
+            app:boxStrokeErrorColor="@android:color/holo_red_dark"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pdfNewNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="@string/file_name"
+                android:textColorHint="@color/red"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/clearTextIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/clear_icon"
+            android:contentDescription="Clear text"
+            />
+
+    </RelativeLayout>
+
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">-->
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/textInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="16dp"-->
+<!--            app:hintEnabled="true"-->
+<!--            app:hintAnimationEnabled="true"-->
+<!--            app:boxStrokeColor="@color/red"-->
+<!--        app:boxStrokeErrorColor="@android:color/holo_red_dark"-->
+<!--        app:errorEnabled="true">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/pdfNewNameEt"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:hint="Enter text"-->
+
+<!--            android:textColorHint="@color/red"/>-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        >
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_weight="0.5"
+            android:text="@string/cancel"
+            android:textSize="@dimen/_11ssp"
+            android:background="@drawable/btn_add_text_cancel_bg"
+            android:textColor="@color/toolbar_title_color"
+            android:fontFamily="@font/poppins_regular"
+            android:id="@+id/cancelBtn"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_weight="0.5"
+            android:text="@string/rename"
+            android:textSize="@dimen/_11ssp"
+            android:background="@drawable/btn_add_text_ok_bg"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:id="@+id/renameBtn"
+            android:layout_marginStart="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

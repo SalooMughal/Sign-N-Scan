@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Button to Select PDF File -->
+    <Button
+        android:id="@+id/selectPdfButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select PDF File"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Radio Group for Rotation Options -->
+    <RadioGroup
+        android:id="@+id/rotationOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rotate90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90°"/>
+
+        <RadioButton
+            android:id="@+id/rotate180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="180°"/>
+
+        <RadioButton
+            android:id="@+id/rotate270"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="270°"/>
+    </RadioGroup>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:boxStrokeColor="@color/red"
+            app:boxStrokeErrorColor="@android:color/holo_red_dark"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/startPageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="Start Page"
+                android:inputType="number"
+                android:background="@drawable/language_unselected_item_bg"
+                android:textColorHint="@color/red"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:boxStrokeColor="@color/red"
+            app:boxStrokeErrorColor="@android:color/holo_red_dark"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/endPageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="End Page"
+                android:background="@drawable/language_unselected_item_bg"
+
+                android:inputType="number"
+                android:textColorHint="@color/red"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <!-- Button to Rotate PDF -->
+    <Button
+        android:id="@+id/rotatePdfBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rotate PDF"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView for Displaying Saved PDF Files -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

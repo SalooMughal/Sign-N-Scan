@@ -1,0 +1,63 @@
+{
+    "project_info": {
+        "project_number": "824612363462",
+        "project_id": "docsign---image-to-pdf-creator",
+        "storage_bucket": "docsign---image-to-pdf-creator.firebasestorage.app"
+    },
+    "client": [
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:824612363462:android:642bcae35f2d6083b18bc7",
+                "android_client_info": {
+                    "package_name": "com.pixelz360.docsign.imagetopdf.creator"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "824612363462-ebpeufod2h6eo8od43cufd3q2vqjnrb3.apps.googleusercontent.com",
+                    "client_type": 1,
+                    "android_info": {
+                        "package_name": "com.pixelz360.docsign.imagetopdf.creator",
+                        "certificate_hash": "144a6c1d60f7970b27249bf9ae8c2a319787b93a"
+                    }
+                },
+                {
+                    "client_id": "824612363462-i4ctt5793g089vfm2ahsu6i1ivn4fnok.apps.googleusercontent.com",
+                    "client_type": 1,
+                    "android_info": {
+                        "package_name": "com.pixelz360.docsign.imagetopdf.creator",
+                        "certificate_hash": "a811a1a31279e94edec4ace8bbcb56c038294e71"
+                    }
+                },
+                {
+                    "client_id": "824612363462-msjagbn461fu08j38obar236644bucpj.apps.googleusercontent.com",
+                    "client_type": 1,
+                    "android_info": {
+                        "package_name": "com.pixelz360.docsign.imagetopdf.creator",
+                        "certificate_hash": "9b3ee5185473d16d856a7f1f7fb242b20c0de01b"
+                    }
+                },
+                {
+                    "client_id": "824612363462-il9a8l8gd0kmg6sj4pj2pianuut5gf00.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyCFqiW65oUE1dOCg_iOT2gZxxW6rVIFFNM"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": [
+                        {
+                            "client_id": "824612363462-il9a8l8gd0kmg6sj4pj2pianuut5gf00.apps.googleusercontent.com",
+                            "client_type": 3
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "configuration_version": "1"
+}

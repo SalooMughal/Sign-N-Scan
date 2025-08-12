@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="false">
+
+
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/backButton"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/draw_signature"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/toolbar_title_color"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/nextBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/saveBtn"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:src="@drawable/save_signiture_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+
+    <LinearLayout
+        android:id="@+id/signature_panel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomtoolbar"
+        android:layout_centerInParent="true"
+        android:background="@color/ink_signature_background_view_color"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/signature_separator_color" />
+
+        <FrameLayout
+            android:id="@+id/drawingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+    <!--            <View-->
+    <!--                android:id="@+id/signature_baseline_view"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="1.0dip"-->
+    <!--                android:layout_gravity="bottom"-->
+    <!--                android:layout_marginBottom="@dimen/signature_base_line_bottom_margin"-->
+    <!--                android:background="@color/signature_blue" />-->
+
+            <com.pixelz360.docsign.imagetopdf.creator.signiture_model.Activity.SignatureView
+                android:id="@+id/inkSignatureOverlayView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <ImageButton
+                    android:id="@+id/action_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/clear_signiture_icon"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+            </com.pixelz360.docsign.imagetopdf.creator.signiture_model.Activity.SignatureView>
+        </FrameLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/signature_separator_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="center"
+    android:weightSum="1"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brush_n_size"
+        android:textColor="#6A7278"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:max="100"
+        android:min="5"
+        android:progressTint="@color/green"
+        android:thumbTint="@color/green"
+        android:progressBackgroundTint="@color/seekbara_text_color"
+        android:progress="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:layout_marginStart="6dp"
+        android:id="@+id/progressCountTextview"
+        android:textColor="#6A7278"/>
+
+
+
+
+
+</LinearLayout>
+
+        <View
+            android:id="@+id/signature_baseline_view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/signature_line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+         >
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/inkblack"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked" />
+
+                <RadioButton
+                    android:id="@+id/radioRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/inkred"
+                    android:onClick="onRadioButtonClicked" />
+
+                <RadioButton
+                    android:id="@+id/radioBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/inkblue"
+                    android:onClick="onRadioButtonClicked" />
+
+                <RadioButton
+                    android:id="@+id/radiogreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/inkgreen"
+                    android:onClick="onRadioButtonClicked" />
+            </RadioGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerView"
+                android:orientation="horizontal" />
+
+
+<!--            <TextView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="@drawable/black_color_bg"-->
+<!--                android:id="@+id/blackColor"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="@drawable/light_gray_color_bg"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:id="@+id/lightgrayColor"/>-->
+
+
+<!--            <TextView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="@drawable/vivid_yellow_color_bg"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:id="@+id/yellowColor"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="@drawable/red_color_bg"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:id="@+id/redColor"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="@drawable/green_color_bg"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:id="@+id/greenColor"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="@drawable/blue_color_bg"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:id="@+id/blueColor"/>-->
+            
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

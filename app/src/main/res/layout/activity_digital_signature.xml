@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/docviewer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Toolbar -->
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintHeight_percent="0.095"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:id="@+id/toolbar">-->
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/back_btn"-->
+<!--            android:id="@+id/backButton"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:paddingBottom="5dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:paddingStart="20dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sign document"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/backButton"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:textSize="@dimen/_19ssp"-->
+<!--            android:textColor="@color/toolbar_title_color"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:id="@+id/nextBtn"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:layout_marginStart="14dp"/>-->
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:id="@+id/action_save"-->
+<!--            android:layout_marginEnd="@dimen/_15sdp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:src="@drawable/save_signiture_icon"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/workingLayout"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <com.pixelz360.docsign.imagetopdf.creator.signiture_model.Document.PDSViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+            <ProgressBar
+                android:id="@+id/savingProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:visibility="invisible" />
+
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="130dp"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="bottom|left"
+                android:visibility="gone"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:background="@drawable/viewpager_again_back_bg"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:src="@drawable/up_arrow"
+                            android:layout_gravity="center"
+                            android:id="@+id/btnScrollUp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+
+                        android:background="@drawable/viewpager_again_back_bg">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:src="@drawable/arrow_down_sign_to_navigate"
+                            android:layout_gravity="center"
+                            android:id="@+id/btnScrollDown"/>
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <!-- Scroll Control Buttons -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/scrollControlLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnScrollUp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Scroll Up"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:layout_marginEnd="16dp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnScrollDown"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Scroll Down"-->
+<!--                    android:textColor="@android:color/white" />-->
+<!--            </LinearLayout>-->
+
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbar">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/back_btn"
+                android:id="@+id/backButton"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign document"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/toolbar_title_color"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/nextBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="14dp"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/action_save"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:src="@drawable/save_signiture_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/add_icon"
+            android:backgroundTint="@color/green" />
+
+
+        <LinearLayout
+            android:id="@+id/pageNumberOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="@dimen/pagenumber_overlay_margin_top"
+            android:background="@drawable/pagenumber_indicator_theme"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pageNumberTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pagenumber_left_margin"
+                android:layout_marginTop="@dimen/pagenumber_top_bottom_margin"
+                android:layout_marginRight="@dimen/pagenumber_right_margin"
+                android:layout_marginBottom="@dimen/pagenumber_top_bottom_margin"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif"
+                android:padding="0.0dip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textViewTextSize" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/workingLayout">
+
+
+
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/action_sign"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="@dimen/fab_margin"-->
+<!--            android:clickable="true"-->
+<!--            app:srcCompat="@drawable/add_icon"-->
+<!--            android:backgroundTint="@color/green" />-->
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            android:weightSum="1"-->
+<!--            android:orientation="horizontal">-->
+
+
+
+
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="17dp"-->
+<!--                    android:layout_weight="0.5"-->
+<!--                    android:paddingEnd="@dimen/_10sdp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginEnd="3dp"-->
+
+<!--                    android:id="@+id/fromImage"-->
+
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/convert_pdf_icon"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/layoot"-->
+<!--                        android:id="@+id/pick_image_ImageView"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:tint="#1F1F1F" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/pick_from_image_library"-->
+<!--                        android:fontFamily="@font/poppins_regular"-->
+<!--                        android:textColor="#1F1F1F"-->
+<!--                        android:id="@+id/from_Image_TextView"-->
+<!--                        android:textSize="@dimen/_9ssp"-->
+<!--                        android:layout_marginStart="15dp"/>-->
+
+
+<!--                </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:layout_weight="0.5"-->
+<!--                android:paddingEnd="@dimen/_15sdp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:id="@+id/fromCollection"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/signiture_icon"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/layoot"-->
+<!--                    android:id="@+id/from_Collcation_ImageView"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:tint="#1F1F1F" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/from_signature_collection"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:textColor="#1F1F1F"-->
+<!--                    android:id="@+id/from_Collaction_TextView"-->
+<!--                    android:textSize="@dimen/_9ssp"-->
+<!--                    android:layout_marginStart="15dp"/>-->
+
+
+<!--            </LinearLayout>-->
+
+
+
+
+
+
+<!--        </LinearLayout>-->
+
+
+
+    </LinearLayout>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

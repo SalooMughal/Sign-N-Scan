@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colors">
+        <item>#000000</item>
+        <item>#ff5252</item>
+        <item>#ffeb3b</item>
+        <item>#afb42b</item>
+        <item>#00c853</item>
+        <item>#00b0ff</item>
+        <item>#303f9f</item>
+        <item>#c2185b</item>
+        <item>#7b1fa2</item>
+        <item>#ffffff</item>
+    </array>
+
+
+        <string-array name="font_type_array">
+            <item>Garogier Regular</item>
+            <item>Gilroy Bold</item>
+            <item>Gilroy Light</item>
+            <item>Gilroy Medium</item>
+            <item>Gilroy Regular</item>
+        </string-array>
+    <string-array name="split_options">
+        <item>Split by Range</item>
+        <item>Equal Page Ranges</item>
+        <item>Delete Pages by Range</item>
+        <item>Extract All Pages</item>
+    </string-array></resources>

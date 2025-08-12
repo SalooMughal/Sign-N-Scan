@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/mainlayout"
+>
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintHeight_percent="0.15"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:background="@drawable/toolbar_updated_bg_2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="46dp"-->
+<!--            android:layout_marginEnd="18dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="1"-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/searchLayout"-->
+<!--            android:background="@drawable/pdf_item_bg">-->
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/search_icon_red"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="21dp"/>-->
+
+<!--            <EditText-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="0.9"-->
+<!--                android:layout_marginStart="38dp"-->
+<!--                android:hint="@string/search_document"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:id="@+id/searchEditText"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:background="@null"/>-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/cancel_icon"-->
+<!--                android:id="@+id/searchBackBtn"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="18dp"/>-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/back_btn"-->
+<!--                android:id="@+id/clearButton"-->
+<!--                android:paddingTop="8dp"-->
+<!--                android:paddingBottom="8dp"-->
+<!--                android:visibility="gone"-->
+<!--            />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=" Selected"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:textColor="#3D3C3F"-->
+<!--                android:textSize="@dimen/_17ssp"-->
+<!--                android:paddingStart="18dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:id="@+id/toolbarSelectedItem"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/docsign"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:textColor="@color/main_toolbar_title"-->
+<!--                android:textSize="@dimen/_17ssp"-->
+<!--                android:id="@+id/toolbarTitle"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:layout_marginEnd="18dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--&lt;!&ndash;                <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:background="@android:color/transparent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_gravity="center_vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/allSelctedItemBtn"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginEnd="11dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:src="@drawable/selection_item" />&ndash;&gt;-->
+
+
+
+
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/fileSortingBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:src="@drawable/sorting_icon" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/searchBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:src="@drawable/search_icon" />-->
+
+
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/favBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_marginEnd="11dp"-->
+<!--                    android:src="@drawable/favrarte_selected_icon" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/deleteBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_marginEnd="11dp"-->
+<!--                    android:src="@drawable/main_delete_icon" />-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/allSelctedItemBtn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:background="@drawable/btn_un_select_bg"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="12dp"-->
+<!--                    android:paddingEnd="12dp"-->
+<!--                    android:text="@string/select"-->
+<!--                    android:textColor="@color/select_text_un_selected"-->
+<!--                    android:textSize="@dimen/_10ssp"-->
+
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/childLayout">
+
+<!--        app:layout_constraintHeight_percent="0.14"-->
+
+<!--        android:background="@drawable/home_fragment_child_bg"-->
+
+
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:scrollbarThumbHorizontal="@color/light_gry"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+
+<!--            >-->
+
+
+
+
+
+
+<!--        </HorizontalScrollView>-->
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scanFilesCount"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all_files"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_14ssp"
+                android:id="@+id/scannerName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Files"
+                android:textColor="#828282"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_11ssp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/allCountFiles"/>
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    app:layout_constraintHeight_percent="0.77"-->
+
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintHeight_percent="0.94"
+        app:layout_constraintTop_toBottomOf="@+id/childLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="-80dp"
+                app:lottie_rawRes="@raw/empty_folder_recyclerview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/no_files_yet"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_17ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/the_folder_s_empty_let_s_bundle_all_the_images_into_one_pdf_for_easy_access"
+                android:textColor="#3D3C3F"
+                android:layout_marginStart="33dp"
+                android:layout_marginEnd="33dp"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/highlited_icon"/>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:weightSum="0.9"-->
+<!--                android:id="@+id/navigationLayout"-->
+<!--                android:background="@color/white">-->
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="0.3"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/homeLayout"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="33dp"-->
+<!--                        android:id="@+id/mainHome"-->
+<!--                        android:gravity="center">-->
+
+<!--                        &lt;!&ndash;                android:background="@drawable/selected_main_icon_bg"&ndash;&gt;-->
+
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/imageHome"-->
+<!--                            android:src="@drawable/home_one_icon" />-->
+
+<!--                    </LinearLayout>-->
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/textHome"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:fontFamily="@font/roboto_medium"-->
+<!--                        android:text="@string/home"-->
+<!--                        android:textAllCaps="true"-->
+<!--                        android:textColor="@color/action_main_icon_color"-->
+<!--                        android:textSize="@dimen/_8ssp" />-->
+<!--                </LinearLayout>-->
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="0.18"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                        android:id="@+id/fab"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:srcCompat="@drawable/add_icon"-->
+<!--                        android:backgroundTint="@color/red"-->
+<!--                        app:layout_anchorGravity="center|bottom"-->
+<!--                        android:contentDescription="TODO" />-->
+<!--                </LinearLayout>-->
+
+
+
+
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="0.3"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/toolsLayout"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="33dp"-->
+<!--                        android:background="@drawable/un_selected_main_icon_bg"-->
+<!--                        android:id="@+id/mainToolsLayout"-->
+<!--                        android:gravity="center">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/toolsIcon"-->
+<!--                            android:src="@drawable/action_icon"-->
+<!--                            />-->
+
+<!--                    </LinearLayout>-->
+
+
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/toolsText"-->
+<!--                        android:textColor="@color/action_main_icon_color"-->
+<!--                        android:fontFamily="@font/roboto_medium"-->
+<!--                        android:textSize="@dimen/_8ssp"-->
+<!--                        android:textAllCaps="true"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:text="@string/tools"/>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="0.3"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/settingLayout"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="33dp"-->
+<!--                        android:background="@drawable/un_selected_main_icon_bg"-->
+<!--                        android:id="@+id/mainSetting"-->
+<!--                        android:gravity="center">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/settingIcon"-->
+<!--                            android:src="@drawable/setting_icon"-->
+<!--                            />-->
+
+<!--                    </LinearLayout>-->
+
+
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/settingText"-->
+<!--                        android:textColor="@color/action_main_icon_color"-->
+<!--                        android:fontFamily="@font/roboto_medium"-->
+<!--                        android:textSize="@dimen/_8ssp"-->
+<!--                        android:textAllCaps="true"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:text="@string/settings"/>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="0.3"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:id="@+id/premiumLayout"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="33dp"-->
+<!--                        android:background="@drawable/un_selected_main_icon_bg"-->
+<!--                        android:id="@+id/mainPremium"-->
+<!--                        android:gravity="center">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/premiumProfileImage"-->
+<!--                            android:src="@drawable/premium_bootom_icon"-->
+<!--                            />-->
+
+<!--                    </LinearLayout>-->
+
+
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/premiumText"-->
+<!--                        android:textColor="@color/action_main_icon_color"-->
+<!--                        android:fontFamily="@font/roboto_medium"-->
+<!--                        android:textSize="@dimen/_8ssp"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:textAllCaps="true"-->
+<!--                        android:text="@string/premium"/>-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/we_made_it_easy_with_signnscan_pdf"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="6dp"
+        android:visibility="gone"
+        android:id="@+id/weMadeTextview"
+        app:layout_constraintBottom_toTopOf="@+id/convert_sign_scan_action_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:orientation="horizontal"
+        android:weightSum="1.5"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/convert_sign_scan_action_layout"
+        android:layout_marginEnd="35dp"
+        android:visibility="gone"
+        android:layout_marginStart="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/main_screen_item_bg"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_weight="0.5"
+            android:id="@+id/convertPdfBtn"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_image_to_pdf_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/convert_to_pdf"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_9ssp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/action_sub_text_color"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_weight="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:id="@+id/scanBtn"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_scan_icon"
+                />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scanned_docoments"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_9ssp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/action_sub_text_color"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_weight="0.5"
+            android:id="@+id/signBtn"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_sign_icon"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_document"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_9ssp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/action_sub_text_color"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.74"
+        app:layout_constraintTop_toBottomOf="@+id/childLayout"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/emptyLayoutRecyclerviewItem"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_search_data_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_17ssp"
+            android:textColor="#3D3C3F"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_any_document_here"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="#3D3C3F"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pdfRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.94"
+
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/childLayout"
+        tools:listitem="@layout/pdf_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

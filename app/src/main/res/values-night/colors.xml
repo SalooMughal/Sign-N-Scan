@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="home_and_action_toolbar_color">#121212</color>
+
+
+
+
+
+    <color name="convert_document_action_text">#FFE5E5</color>
+    <color name="sign_document_action_text">#C4F4E6</color>
+    <color name="scan_document_action_text">#AEC6F5</color>
+
+
+
+    <color name="convert_pdf_outline_color">#1E1F20</color>
+    <color name="sign_document_outline_color">#1E1F20</color>
+    <color name="scan_document_outline_color">#1E1F20</color>
+    <color name="bar_code_outline_color">#1E1F20</color>
+    <color name="add_watermark_outline_color">#1E1F20</color>
+    <color name="lock_code_outline_color">#1E1F20</color>
+    <color name="un_lock_code_outline_color">#1E1F20</color>
+    <color name="qr_code_outline_color">#1E1F20</color>
+    <color name="aplit_outline_color">#1E1F20</color>
+    <color name="merge_outline_color">#1E1F20</color>
+    <color name="compress_outline_color">#1E1F20</color>
+    <color name="generate_code_outline_color">#1E1F20</color>
+    <color name="bar_code_main_color">#1E1F20</color>
+    <color name="genrate_code_main_color">#1E1F20</color>
+    <color name="qr_code_main_color">#1E1F20</color>
+    <color name="bar_code_main_color_2">#1E1F20</color>
+    <color name="scanner_icon_main_color_2">#1E1F20</color>
+    <color name="pdf_tools_bg">#1E1F20</color>
+    <color name="main_screen_item_outline_color">#A8ACB4</color>
+
+
+    <color name="black">#FFFFFFFF</color> <!-- White text for dark mode -->
+    <color name="ink_signature_background_view_color">#333333</color> <!-- Dark grey background -->
+    <color name="signature_title_text_color">#FFFFFF</color> <!-- White text for dark mode -->
+    <color name="signature_blue">#00A0E9</color> <!-- Bright blue for dark mode -->
+    <color name="signature_separator_color">#666666</color> <!-- Darker grey separator -->
+    <color name="white">#121212</color> <!-- Very dark background -->
+    <color name="full_bg_color">#202020</color> <!-- Dark background -->
+<!--    <color name="un_select_signature_color">#BBBBBB</color> &lt;!&ndash; Light grey for unselected items &ndash;&gt;-->
+    <color name="un_select_signature_color">#ffffff</color> <!-- Light grey for unselected items -->
+    <color name="gggg">#FFFFFF</color> <!-- White text for dark mode -->
+    <color name="scanner_camera_tab">#99333333</color> <!-- Semi-transparent dark grey -->
+    <color name="signature_blue_disabled">#335599AA</color> <!-- Disabled light blue -->
+    <color name="element_focus_color">#00A0E9</color> <!-- Bright blue for focus elements -->
+    <color name="inkblue">#0057B7</color> <!-- Darker blue for dark mode -->
+    <color name="inkgreen">#00C853</color> <!-- Brighter green for dark mode -->
+    <color name="inkred">#D32F2F</color> <!-- Darker red for dark mode -->
+    <color name="inkblack">#FFFFFF</color> <!-- White text for dark mode -->
+    <color name="delete">#999999</color> <!-- Light grey for delete icon in dark mode -->
+    <color name="grey_90">#EEEEEE</color> <!-- Light grey text for dark mode -->
+<!--    <color name="grey_5">#121212</color> &lt;!&ndash; Very dark grey background &ndash;&gt;-->
+    <color name="grey_5">#3D3D3D</color> <!-- Very dark grey background -->
+    <color name="white_heart">#ffffff</color>
+    <color name="grey_10">#888888</color> <!-- Light grey text for dark mode -->
+    <color name="splash_bg_color">#FF0000</color> <!-- Bright red splash background for dark mode -->
+    <color name="started_textview_color">#E0E0E0</color> <!-- Light grey text for dark mode -->
+    <color name="toolbar_title_color">#FFFFFF</color> <!-- White toolbar title for dark mode -->
+    <color name="setting_icon_main_color">#E3E3E3</color> <!-- White toolbar title for dark mode -->
+    <color name="setting_icon_color">#FF2F2F</color>
+    <color name="main_toolbar_title">#ffffff</color>
+    <color name="red">#FF5252</color> <!-- Light red for dark mode -->
+    <color name="green">#FF5252</color> <!-- Light red for dark mode -->
+    <color name="dark_green">#000000</color>
+
+    <color name="first_screen_bg">#000000</color> <!-- Light red for dark mode -->
+    <color name="light_gry">#3A3A3A</color> <!-- Dark grey for dark mode elements -->
+    <color name="unselected">#B0B0B0</color> <!-- Light grey for unselected text in dark mode -->
+    <color name="signature_line">#555555</color> <!-- Dark grey for lines in dark mode -->
+    <color name="light_gray">#2A2A2A</color> <!-- Dark grey background in dark mode -->
+    <color name="yallow_color">#FFD600</color> <!-- Bright yellow for dark mode -->
+    <color name="green_color">#00E676</color> <!-- Bright green for dark mode -->
+    <color name="blue_color">#42A5F5</color> <!-- Brighter blue for dark mode -->
+    <color name="dark_color">#101010</color> <!-- Very dark grey background -->
+    <color name="colorSelected">@android:color/transparent</color> <!-- No change -->
+<!--    <color name="edit_module_color_unselected">#888888</color> &lt;!&ndash; Light grey for unselected items &ndash;&gt;-->
+    <color name="edit_module_color_unselected">#ffffff</color> <!-- Light grey for unselected items -->
+    <color name="unselected_icon_color">#AAAAAA</color> <!-- Light grey for icons in dark mode -->
+    <color name="select_text_un_selected">#E0E0E0</color> <!-- Light grey for unselected text -->
+    <color name="mainn_item_bg">#2A2A2A</color> <!-- Dark grey for favorite preview icons -->
+    <!-- Scanny colors -->
+    <color name="bg_color">#212121</color> <!-- Dark grey background in dark mode -->
+    <color name="bg_color1">#1A1A1A</color> <!-- Darker grey background -->
+    <color name="black_translucent">#80212121</color> <!-- Semi-transparent dark grey -->
+    <color name="colorAccent">#FF4081</color> <!-- Bright accent pink for dark mode -->
+    <color name="colorPrimary">#FF4081</color> <!-- Same as accent -->
+    <color name="colorPrimaryDark">#C51162</color> <!-- Darker pink for status bar in dark mode -->
+    <color name="editor_light_color">#333333</color> <!-- Dark grey for editor in dark mode -->
+    <color name="error_color_material_dark">#D32F2F</color> <!-- Dark red for errors -->
+    <color name="error_color_material_light">#EF5350</color> <!-- Brighter red for error text -->
+    <color name="fg_color">#121212</color> <!-- Very dark foreground color in dark mode -->
+    <color name="light_bg_color">#303030</color> <!-- Darker grey for light backgrounds -->
+    <color name="light_txt_color">#FFFFFF</color> <!-- White text for dark mode -->
+    <color name="orange">#FFA726</color> <!-- Bright orange for dark mode -->
+    <color name="selected_txt_color">#FFFFFF</color> <!-- White for selected text in dark mode -->
+    <color name="txt_color">#FFFFFF</color> <!-- White text in dark mode -->
+    <color name="sticker_border">#222222</color> <!-- Dark grey for borders -->
+    <color name="tab_indicator_color">#FF4081</color> <!-- Bright pink for tab indicator -->
+    <color name="tab_unselected_txt_color">#9E9E9E</color> <!-- Light grey for unselected tab text -->
+    <color name="toolbar_color">#212121</color> <!-- Dark grey toolbar in dark mode -->
+    <color name="transparent">#00000000</color> <!-- Transparent, no change -->
+    <color name="black_transparent">#80212121</color> <!-- Semi-transparent dark grey -->
+    <color name="unselected_txt_color">#AAAAAA</color> <!-- Light grey for unselected text -->
+    <color name="unselected_txt_white_color">#FFFFFF</color> <!-- White for unselected white text -->
+    <color name="yellow">#FFD600</color> <!-- Bright yellow for dark mode -->
+    <color name="viewfinder_border">#E0E0E0</color> <!-- Light grey for viewfinder borders -->
+    <color name="viewfinder_laser">#D32F2F</color> <!-- Darker red for viewfinder laser -->
+    <color name="viewfinder_mask">#FF000000</color> <!-- Black mask for viewfinder -->
+    <color name="text_second">#B0BEC5</color> <!-- Light grey for secondary text -->
+    <color name="darkpink">#FF4081</color> <!-- Bright pink for dark mode -->
+    <color name="subscribe_dialog_one_text">#DDDDDD</color> <!-- Light grey text in dark mode -->
+    <color name="dialog_bg_color">#333333</color> <!-- Dark background for dialogs -->
+    <color name="ucrop_color_toolbar">@color/black</color> <!-- Black toolbar in dark mode -->
+    <color name="ucrop_color_statusbar">@color/black</color> <!-- Black status bar in dark mode -->
+    <color name="ucrop_color_widget_text">#FFFFFF</color> <!-- White widget text in dark mode -->
+    <color name="ucrop_color_active_controls_color">@color/red</color> <!-- Red active controls -->
+    <color name="ucrop_color_toolbar_widget">#E0E0E0</color> <!-- Light grey toolbar widget text -->
+    <color name="et_text_color">@color/white</color> <!-- White text in dark mode -->
+    <color name="text_color_white">@color/black</color> <!-- Black text in dark mode -->
+    <color name="un_selcted">#A2A2A2</color> <!-- Grey for unselected items -->
+    <color name="un_selected_thum_setting">#E3E3E3</color>
+    <color name="tab_unselected_color">#303030</color> <!-- Dark grey for unselected tabs -->
+    <color name="headingtextcolor">#FFFFFF</color> <!-- White text for headings in dark mode -->
+    <color name="favrarte_prview_icon">#AAAAAA</color> <!-- Light grey for favorite preview icons -->
+    <color name="item_pages_cark_bg">#71A1FF</color> <!-- Dark grey for item background -->
+    <color name="filter_screen_next_back_card_bg">#444444</color> <!-- Dark grey for filter cards -->
+    <color name="white_both_white">#ffffff</color>
+    <color name="filter_text_color">#E0E0E0</color> <!-- Light grey text for filters -->
+<!--    <color name="left_color">#888888</color> &lt;!&ndash; Light grey for left-side elements &ndash;&gt;-->
+    <color name="left_color">#ffffff</color> <!-- Light grey for left-side elements -->
+    <color name="light_toolbar_btn_bg">#99333333</color> <!-- Semi-transparent dark grey for buttons -->
+    <color name="preview_delete_color">#4F73FF</color> <!-- Bright blue for delete button -->
+    <color name="preview_share_icon_color">#28AF2D</color> <!-- Bright green for share icon -->
+    <color name="preview_home_icon_color">#F4B410</color> <!-- Bright yellow for home icon -->
+    <color name="item_share_icon_color">#525252</color> <!-- Light grey for share icon -->
+    <color name="signature_gry_bg">#444444</color> <!-- Dark grey for signature background -->
+    <color name="clear_color">#5A5A5A</color> <!-- Dark grey for clear color in dark mode -->
+    <color name="seekbara_text_color">#D9D9D9</color> <!-- Light grey text for seekbars -->
+    <color name="free_add_terms_text_coloe">#CCCCCC</color> <!-- Light grey text for terms -->
+    <color name="cross_color">#BBBBBB</color> <!-- Light grey for cross icons -->
+    <color name="action_pdf_icon_bf">#121212</color> <!-- Dark grey for PDF icon background -->
+    <color name="action_sign_icon_bf">#005D4C</color> <!-- Darker green for sign icon background -->
+    <color name="action_sign_text_color">#00E676</color> <!-- Bright green text color for sign action -->
+    <color name="action_scanner_icon_bg">#2B4C84</color> <!-- Darker blue for scanner icon background -->
+    <color name="action_scanner_icon">#A0B4D3</color> <!-- Lighter blue for scanner icon -->
+    <color name="action_sub_text_color">#AAAAAA</color> <!-- Light grey for subtext -->
+    <color name="main_fragment_selected_color">#99333333</color> <!-- Semi-transparent dark grey -->
+    <color name="action_main_icon_color">#FFFFFF</color> <!-- White for main action icon in dark mode -->
+
+    <color name="on_boarding_title_color_one">#FFFFFF</color>
+    <color name="on_boarding_title_color_tow">#FF2F2F</color>
+    <color name="onbarding_sub_screen_bg">#000000</color>
+
+</resources>

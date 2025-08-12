@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup,android:supportsRtl"
+        tools:targetApi="31">
+        <activity
+            android:name=".editModule.NextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdfToJpg.JpgViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdfToJpg.PdfConvertOptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdfToJpg.FileResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdfToJpg.ProcessingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".googleSignInClasses.GoogleSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ads_free_app_billing.AdLoaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdfToJpg.PdfSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".zip_class.RarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".zip_class.SevenZArchiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".zip_class.Ttf_And_Svg_View_Activity"
+            android:exported="true">
+
+            <!-- Intent filter for opening various document types -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/x-font-ttf" />
+                <data android:mimeType="font/ttf" />
+                <data android:mimeType="image/svg+xml" />
+            </intent-filter>
+            <intent-filter
+                android:scheme="http"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/x-font-ttf" />
+                <data android:mimeType="font/ttf" />
+                <data android:mimeType="image/svg+xml" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".all_document_viewer.WordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".htmlviewsunny.HtmlMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".all_document_viewer.AllDocMainActivity"
+            android:configChanges="orientation"
+            android:exported="true">
+
+            <!-- Intent filter for opening various document types -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- <data android:mimeType="application/pdf" /> -->
+                <data android:mimeType="application/msword" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.ms-excel" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                <data android:mimeType="application/vnd.ms-powerpoint" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="application/zip" />
+                <data android:mimeType="application/rar" />
+                <data android:mimeType="application/x-7z-compressed" />
+            </intent-filter>
+            <intent-filter
+                android:scheme="http"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- <data android:mimeType="application/vnd.rar" /> -->
+                <!-- <data android:mimeType="application/x-rar-compressed" /> -->
+                <!-- <data android:mimeType="application/octet-stream" /> -->
+                <!-- <data android:mimeType="*/*"/> -->
+                <!-- <data android:mimeType="application/pdf" /> -->
+                <data android:mimeType="application/x-7z-compressed" />
+                <data android:mimeType="application/zip" />
+                <data android:mimeType="application/rar" />
+                <data android:mimeType="application/msword" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.ms-excel" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                <data android:mimeType="application/vnd.ms-powerpoint" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="text/html" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".googleSignInClasses.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".zip_class.ZipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfITextPdf.PdfEnAndDeCorruptingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfITextPdf.ExtractTextPdfFileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfITextPdf.waterMark.WaterMarkHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPythonEditorTools.PdfWatermarkingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdf_file_view_direct_device_side.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pdf_file_view_direct_device_side.PdfEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfITextPdf.MergeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PdfITextPdf.PdfSplitterActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PdfITextPdf.RangeByPdfSplitterActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PdfITextPdf.PdfCompressionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPythonEditorTools.PdfAddingMetadataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfITextPdf.PdfRotatingPagesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPythonEditorTools.PdfEnAndDeCryptingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPythonEditorTools.PdfExtractingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPythonEditorTools.PdfMergingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPythonEditorTools.PdfSplitterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pdf_file_view_direct_device_side.ActivityDigiSign"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+            <intent-filter
+                android:scheme="http"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bar_and_qr_code.ResultCodeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bar_and_qr_code.GenerateCodeActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ads_free_app_billing.AddSuccessfullyActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pdf_tools_billing.PdfToolsAddSuccessfullyActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ads_free_app_billing.AddFreeActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pdf_tools_billing.AddFreeForPdfToolsActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UsageActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddDummyActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".language.LanguageActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".editModule.ConvertToPdfActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".editModule.EditMoudleActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".editModule.AllEditImagesActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Prview_Screen"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Get_Image_List_Activity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignitureActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GetStartedActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signiture_model.DigitalSignatureActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bar_and_qr_code.ContinuousCamActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bar_and_qr_code.CamActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PdfITextPdf.AllPDFsActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signiture_model.Activity.FreeHandActivity"
+            android:configChanges="orientation"
+            android:label="Draw Signature"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signiture_model.Activity.SignatureActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PdfViewActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pdf_file_view_direct_device_side.ActivityMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- android:name=".zip_class.PdfSelectionActivity" -->
+        <activity
+            android:name=".FirstActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/uCropStyle" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

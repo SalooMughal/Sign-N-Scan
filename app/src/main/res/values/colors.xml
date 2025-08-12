@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+
+
+    <color name="convert_document_action_text">#FF0000</color>
+    <color name="sign_document_action_text">#03B078</color>
+    <color name="scan_document_action_text">#495D8D</color>
+
+
+
+
+
+
+    <color name="main_screen_item_outline_color">#495D8D</color>
+    <color name="convert_pdf_outline_color">#FF0000</color>
+    <color name="sign_document_outline_color">#03B078</color>
+    <color name="scan_document_outline_color">#495D8D</color>
+    <color name="bar_code_outline_color">#F3C241</color>
+    <color name="add_watermark_outline_color">#FF8181</color>
+    <color name="lock_code_outline_color">#FF0004</color>
+    <color name="un_lock_code_outline_color">#7363A5</color>
+    <color name="qr_code_outline_color">#FE52B3</color>
+    <color name="aplit_outline_color">#F4B410</color>
+    <color name="merge_outline_color">#13D4FF</color>
+    <color name="compress_outline_color">#989898</color>
+    <color name="generate_code_outline_color">#F9833B</color>
+    <color name="bar_code_main_color">#ffffff</color>
+    <color name="genrate_code_main_color">#FFD2B7</color>
+    <color name="qr_code_main_color">#FFC2E5</color>
+    <color name="bar_code_main_color_2">#FFF2D1</color>
+    <color name="scanner_icon_main_color_2">#CADCFF</color>
+    <color name="pdf_tools_bg">#F6F6F6</color>
+    <color name="ink_signature_background_view_color">#fff5f5f5</color>
+    <color name="signature_title_text_color">#ff333333</color>
+    <color name="signature_blue">#ff2175cb</color>
+    <color name="signature_separator_color">#ffcacaca</color>
+    <color name="white">#ffffffff</color>
+    <color name="guest_bg_btn">#AD1519</color>
+    <color name="full_bg_color">#E6E6E6</color>
+    <color name="un_select_signature_color">#1F1F1F</color>
+    <color name="gggg">#000000</color>
+    <color name="scanner_camera_tab">#80232323</color>
+    <color name="signature_blue_disabled">#4d2175cb</color>
+    <color name="element_focus_color">#ff2175c8</color>
+    <color name="inkblue">#0000FF</color>
+    <color name="inkgreen">#037E03</color>
+    <color name="inkred">#FF0000</color>
+    <color name="inkblack">#000000</color>
+    <color name="delete">#5F5959</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_5">#F2F2F2</color>
+    <color name="grey_10">#777475</color>
+    <color name="splash_bg_color">#FF2F2F</color>
+    <color name="first_screen_bg">#FF2F2F</color>
+    <color name="started_textview_color">#3D3C3F</color>
+    <color name="toolbar_title_color">#1F1F1F</color>
+    <color name="main_toolbar_title">#1F1F1F</color>
+    <color name="setting_icon_main_color">#FF2F2F</color>
+    <color name="setting_icon_color">#ffffff</color>
+    <color name="red">#FF2F2F</color>
+    <color name="green">#03B078</color>
+    <color name="dark_green">#C4F4E6</color>
+    <color name="white_heart">#ffffff</color>
+    <color name="light_gry">#D3D3D3</color>
+    <color name="unselected">#929292</color>
+    <color name="signature_line">#EAEAEA</color>
+    <color name="light_gray">#ECECEC</color>
+    <color name="yallow_color">#FFE500</color>
+    <color name="green_color">#00FF38</color>
+    <color name="blue_color">#001AFF</color>
+    <color name="dark_color">#F9F9F9</color>
+    <color name="colorSelected">@android:color/transparent</color>
+    <color name="edit_module_color_unselected">#6A7278</color>
+    <color name="unselected_icon_color">#6A7278</color>
+    <color name="select_text_un_selected">#3D3C3F</color>
+    <color name="mainn_item_bg">#F9F9F9</color> <!-- Light grey for favorite preview icons -->
+
+
+
+
+    <!--scanny colors-->
+
+
+    <color name="pdf_tools_sub_title">#494949</color>
+    <color name="bg_color">#F0F2F7</color>
+    <color name="bg_color1">#F5F5F5</color>
+    <color name="black_translucent">#5025c4a4</color>
+    <color name="colorAccent">#005BF6</color>
+    <color name="colorPrimary">#005BF6</color>
+    <color name="colorPrimaryDark">#005BF6</color>
+
+    <color name="editor_light_color">#E8E9ED</color>
+    <color name="error_color_material_dark">#FF7043</color>
+    <color name="error_color_material_light">#FF5722</color>
+    <color name="fg_color">#FFFFFF</color>
+
+    <color name="light_bg_color">#EEF0F3</color>
+    <color name="light_txt_color">#005BF6</color>
+    <color name="orange">#ffff900d</color>
+
+    <color name="selected_txt_color">#000000</color>
+    <color name="txt_color">#000000</color>
+
+
+    <color name="sticker_border">#FFFFFF</color>
+
+    <color name="tab_indicator_color">#005BF6</color>
+    <color name="tab_unselected_txt_color">#585D64</color>
+    <color name="toolbar_color">#005BF6</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_transparent">#37000000</color>
+
+    <color name="unselected_txt_color">#9AA1AE</color>
+    <color name="unselected_txt_white_color">#FFFFFF</color>
+
+    <color name="yellow">#80ffff01</color>
+
+    <color name="viewfinder_border">#FFFFFF</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_mask">#b3000000</color>
+
+    <color name="text_second">#ff888893</color>
+    <color name="darkpink">#FF0A91</color>
+
+    <color name="subscribe_dialog_one_text">#A0A0A0</color>
+    <color name="dialog_bg_color">#FFFFFF</color>
+
+    <color name="ucrop_color_toolbar">@color/white</color>
+    <color name="ucrop_color_statusbar">@color/white</color>
+    <color name="ucrop_color_widget_text">#FF000000</color>
+    <color name="ucrop_color_active_controls_color">@color/red</color>
+    <color name="ucrop_color_toolbar_widget">#6A7278</color>
+    <color name="et_text_color">@color/black</color>
+    <color name="text_color_white">@color/white</color>
+    <color name="un_selcted">#A2A2A2</color>
+    <color name="un_selected_thum_setting">#D9D9D9</color>
+    <color name="tab_unselected_color">#E4E3E3</color>
+    <color name="headingtextcolor">#3E3E3E</color>
+    <color name="favrarte_prview_icon">#838383</color>
+    <color name="item_pages_cark_bg">#71A1FF</color>
+    <color name="filter_screen_next_back_card_bg">#6A7278</color>
+    <color name="white_both_white">#ffffff</color>
+    <color name="filter_text_color">#1F1F1F</color>
+    <color name="left_color">#6A7278</color>
+    <color name="light_toolbar_btn_bg">#FFD4D4</color>
+    <color name="preview_delete_color">#4F73FF</color>
+    <color name="preview_share_icon_color">#28AF2D</color>
+    <color name="preview_home_icon_color">#F4B410</color>
+    <color name="item_share_icon_color">#525252</color>
+    <color name="signature_gry_bg">#E8E8E8</color>
+    <color name="clear_color">#FDE6E6</color>
+    <color name="seekbara_text_color">#D9D9D9</color>
+    <color name="free_add_terms_text_coloe">#535353</color>
+    <color name="cross_color">#898686</color>
+    <color name="action_pdf_icon_bf">#FFE5E5</color>
+    <color name="action_sign_icon_bf">#C4F4E6</color>
+    <color name="action_sign_text_color">#03B078</color>
+    <color name="action_scanner_icon_bg">#AEC6F5</color>
+    <color name="action_scanner_icon">#495D8D</color>
+    <color name="action_sub_text_color">#777777</color>
+    <color name="main_fragment_selected_color">#FFD4D4</color>
+    <color name="action_main_icon_color">#49454F</color>
+    <color name="home_and_action_toolbar_color">#FFE5E5</color>
+    <color name="on_boarding_title_color_one">#1F1F1F</color>
+    <color name="on_boarding_title_color_tow">#FF2F2F</color>
+    <color name="on_boarding_title_gpg_color_tow">#1D5CED</color>
+    <color name="bg_color_red">#DE4545</color>
+    <color name="onbarding_sub_screen_bg">#FFD1D1</color>
+    <color name="main_item_strock_color">#C9C9C9</color>
+    <color name="main_item_size_bg">#858585</color>
+
+    <color name="remove_add_bg_color">#FFF2F2</color>
+    <color name="home_toolbar_color">#FFF2F2</color>
+    <color name="yellow_color">#FFFF00</color>
+    <color name="purple">#800080</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="teal">#008080</color>
+    <color name="brown">#A52A2A</color>
+
+
+
+    <color name="listItemColorPdf">#f2d6da</color>
+    <color name="listItemColorDoc">#d3e0f2</color>
+    <color name="listItemColorExcel">#d7e4dc</color>
+    <color name="listItemColorPPT">#f4e1d5</color>
+    <color name="listItemColorImage">#D8F0F7</color>
+    <color name="blue">#ff33b5e5</color>
+
+</resources>

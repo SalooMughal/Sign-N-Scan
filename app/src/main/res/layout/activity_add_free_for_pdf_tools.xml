@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ads_free_app_billing.AddFreeActivity">
+
+
+    <!-- Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="30dp"
+        android:id="@+id/toolbar">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Premium PDF Tools"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/toolbar_title_color"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/nextBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross_icon"
+            android:id="@+id/backButton"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:paddingStart="@dimen/_22ssp"
+        android:paddingEnd="@dimen/_22ssp"
+        android:paddingTop="@dimen/_8ssp"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/pdfToolsLayout"
+            app:layout_constraintHeight_percent="0.30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_154sdp"
+                android:background="@drawable/pdf_tools_premium_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_12ssp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Advance PDF Tools"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/started_textview_color"
+                        android:layout_marginStart="@dimen/_11ssp"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20ssp"
+                        android:text="PREMIUM TOOLS"
+                        android:background="@drawable/pr_tag_bg"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="8.5dp"
+                        android:layout_alignParentRight="true"
+                        android:paddingEnd="8.5dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp"/>
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:id="@+id/pdfToolsSplitLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/pdfToolsTextview"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:id="@+id/splitPdfBtn"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/premume_split_icon"
+                        />
+
+
+                    <!--                        <HorizontalScrollView-->
+                    <!--                            android:id="@+id/splitPdfHorizontalScrollView"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:scrollbars="none">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:text="@string/split_pdf"-->
+                    <!--                                android:fontFamily="@font/poppins_regular"-->
+                    <!--                                android:textSize="@dimen/_9ssp"-->
+                    <!--                                android:id="@+id/splitPdfTextView"-->
+                    <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                    <!--                                android:singleLine="true"-->
+                    <!--                                android:ellipsize="none"-->
+                    <!--                                android:scrollHorizontally="true"-->
+                    <!--                                android:layout_gravity="center_horizontal"-->
+                    <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                    <!--                        </HorizontalScrollView>-->
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:id="@+id/margePdfBtn"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/premume_merge_icon"
+                        />
+
+
+                    <!--                        <HorizontalScrollView-->
+                    <!--                            android:id="@+id/mergePdfHorizontalScrollView"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:scrollbars="none">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:text="@string/merge_pdf"-->
+                    <!--                                android:fontFamily="@font/poppins_regular"-->
+                    <!--                                android:textSize="@dimen/_9ssp"-->
+                    <!--                                android:id="@+id/mergePdfTextView"-->
+                    <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                    <!--                                android:singleLine="true"-->
+                    <!--                                android:ellipsize="none"-->
+                    <!--                                android:scrollHorizontally="true"-->
+                    <!--                                android:layout_gravity="center_horizontal"-->
+                    <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                    <!--                        </HorizontalScrollView>-->
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:id="@+id/compressPdfBtn"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/premume_compress_icon"
+                        />
+
+
+                    <!--                        <HorizontalScrollView-->
+                    <!--                            android:id="@+id/compressPdfHorizontalScrollView"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:scrollbars="none">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:text="@string/compress_pdf"-->
+                    <!--                                android:fontFamily="@font/poppins_regular"-->
+                    <!--                                android:textSize="@dimen/_9ssp"-->
+                    <!--                                android:id="@+id/compressPdfTextView"-->
+                    <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                    <!--                                android:singleLine="false"-->
+                    <!--                                android:ellipsize="none"-->
+                    <!--                                android:gravity="center_horizontal"-->
+                    <!--                                android:scrollHorizontally="true"-->
+                    <!--                                android:layout_gravity="center_horizontal"-->
+                    <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                    <!--                        </HorizontalScrollView>-->
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:id="@+id/addWaterMarkBtn"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/premume_watermark_icon"
+                        />
+
+
+                    <!--                        <HorizontalScrollView-->
+                    <!--                            android:id="@+id/waterPdfHorizontalScrollView"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:scrollbars="none">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:text="@string/watermark"-->
+                    <!--                                android:fontFamily="@font/poppins_regular"-->
+                    <!--                                android:textSize="@dimen/_9ssp"-->
+                    <!--                                android:id="@+id/waterPdfTextView"-->
+                    <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                    <!--                                android:singleLine="true"-->
+                    <!--                                android:ellipsize="none"-->
+                    <!--                                android:scrollHorizontally="true"-->
+                    <!--                                android:layout_gravity="center_horizontal"-->
+                    <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                    <!--                        </HorizontalScrollView>-->
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:visibility="invisible"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/premume_sig_icon"
+                                />
+
+
+                            <!--                        <HorizontalScrollView-->
+                            <!--                            android:id="@+id/splitPdfHorizontalScrollView"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:scrollbars="none">-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/split_pdf"-->
+                            <!--                                android:fontFamily="@font/poppins_regular"-->
+                            <!--                                android:textSize="@dimen/_9ssp"-->
+                            <!--                                android:id="@+id/splitPdfTextView"-->
+                            <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                            <!--                                android:singleLine="true"-->
+                            <!--                                android:ellipsize="none"-->
+                            <!--                                android:scrollHorizontally="true"-->
+                            <!--                                android:layout_gravity="center_horizontal"-->
+                            <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                            <!--                        </HorizontalScrollView>-->
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/premume_sig_icon"
+                                />
+
+
+                            <!--                        <HorizontalScrollView-->
+                            <!--                            android:id="@+id/splitPdfHorizontalScrollView"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:scrollbars="none">-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/split_pdf"-->
+                            <!--                                android:fontFamily="@font/poppins_regular"-->
+                            <!--                                android:textSize="@dimen/_9ssp"-->
+                            <!--                                android:id="@+id/splitPdfTextView"-->
+                            <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                            <!--                                android:singleLine="true"-->
+                            <!--                                android:ellipsize="none"-->
+                            <!--                                android:scrollHorizontally="true"-->
+                            <!--                                android:layout_gravity="center_horizontal"-->
+                            <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                            <!--                        </HorizontalScrollView>-->
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/premume_image_to_pdf_icon"
+                                />
+
+
+                            <!--                        <HorizontalScrollView-->
+                            <!--                            android:id="@+id/mergePdfHorizontalScrollView"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:scrollbars="none">-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/merge_pdf"-->
+                            <!--                                android:fontFamily="@font/poppins_regular"-->
+                            <!--                                android:textSize="@dimen/_9ssp"-->
+                            <!--                                android:id="@+id/mergePdfTextView"-->
+                            <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                            <!--                                android:singleLine="true"-->
+                            <!--                                android:ellipsize="none"-->
+                            <!--                                android:scrollHorizontally="true"-->
+                            <!--                                android:layout_gravity="center_horizontal"-->
+                            <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                            <!--                        </HorizontalScrollView>-->
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/premume_scan_pdf_icon"
+                                />
+
+
+                            <!--                        <HorizontalScrollView-->
+                            <!--                            android:id="@+id/compressPdfHorizontalScrollView"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:scrollbars="none">-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/compress_pdf"-->
+                            <!--                                android:fontFamily="@font/poppins_regular"-->
+                            <!--                                android:textSize="@dimen/_9ssp"-->
+                            <!--                                android:id="@+id/compressPdfTextView"-->
+                            <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                            <!--                                android:singleLine="false"-->
+                            <!--                                android:ellipsize="none"-->
+                            <!--                                android:gravity="center_horizontal"-->
+                            <!--                                android:scrollHorizontally="true"-->
+                            <!--                                android:layout_gravity="center_horizontal"-->
+                            <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                            <!--                        </HorizontalScrollView>-->
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:visibility="invisible"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/premume_scan_pdf_icon"
+                                />
+
+
+                            <!--                        <HorizontalScrollView-->
+                            <!--                            android:id="@+id/compressPdfHorizontalScrollView"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:scrollbars="none">-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/compress_pdf"-->
+                            <!--                                android:fontFamily="@font/poppins_regular"-->
+                            <!--                                android:textSize="@dimen/_9ssp"-->
+                            <!--                                android:id="@+id/compressPdfTextView"-->
+                            <!--                                android:layout_marginTop="@dimen/_6ssp"-->
+                            <!--                                android:singleLine="false"-->
+                            <!--                                android:ellipsize="none"-->
+                            <!--                                android:gravity="center_horizontal"-->
+                            <!--                                android:scrollHorizontally="true"-->
+                            <!--                                android:layout_gravity="center_horizontal"-->
+                            <!--                                android:textColor="@color/action_sub_text_color"/>-->
+
+                            <!--                        </HorizontalScrollView>-->
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/pdfToolsLayout"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/starLayout"
+            app:layout_constraintHeight_percent="0.12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_7ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/childStarLayou"
+                android:orientation="horizontal">
+<!--                android:background="@drawable/premume_bg"-->
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_icon"
+                    android:layout_marginStart="@dimen/_17ssp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regular updates and new features"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:layout_marginStart="7dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Your Plan"
+                android:textAllCaps="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_17ssp"
+                android:includeFontPadding="false"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:textColor="@color/toolbar_title_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/childStarLayou"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/starLayout"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/weeklyLayout"
+            app:layout_constraintHeight_percent="0.28">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:id="@+id/weeklyBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHeight_percent="0.29"
+                android:layout_marginTop="@dimen/_1ssp"
+                android:background="@drawable/plan_un_selected_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEEKLY Plan"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/black"
+                        android:id="@+id/weeklyTextTitle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_18ssp"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$AUD"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/black"
+                        android:id="@+id/weeklyTextPrice"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_17ssp"/>
+
+                    />
+
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.29"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_6ssp"
+                android:background="@drawable/plan_un_selected_bg"
+                android:id="@+id/monthlyBtn"
+                app:layout_constraintTop_toBottomOf="@+id/weeklyBtn"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monthly Plan"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/black"
+                        android:id="@+id/monthlyTextTitle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_18ssp"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$AUD"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/black"
+                        android:id="@+id/monthlyTextPrice"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_17ssp"/>
+
+                    />
+
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.29"
+                android:orientation="horizontal"
+                android:id="@+id/yearlyBtn"
+                android:layout_marginTop="@dimen/_6ssp"
+                app:layout_constraintTop_toBottomOf="@+id/monthlyBtn"
+                android:background="@drawable/plan_un_selected_bg">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_17ssp"
+                    android:orientation="horizontal"
+
+                    >
+
+
+                    <TextView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:text="Best Plan"
+                        android:textSize="@dimen/_8ssp"
+                        android:background="@drawable/best_plan_bg"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+                        android:id="@+id/bestPlan"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp"
+                        android:paddingTop="1.51dp"
+                        android:paddingBottom="1.51dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Annual Plan"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/black"
+                        android:paddingTop="@dimen/_8ssp"
+                        android:id="@+id/yearlyTextTitle"
+                        android:layout_centerVertical="true"
+
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_17ssp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$AUD"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="@dimen/_13ssp"
+                            android:textColor="@color/black"
+                            android:includeFontPadding="false"
+                            android:layout_gravity="right"
+                            android:id="@+id/yearlyTextPrice"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Per Month"
+                                android:textAllCaps="false"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textSize="@dimen/_8ssp"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/red"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$AUD"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="@dimen/_11ssp"
+                                android:includeFontPadding="false"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@color/black"
+                                android:id="@+id/yearlyPriceDividePerMonth"
+                                />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    />
+
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/weeklyLayout"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.30">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rs 1600 (Billed every 7 days)"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_8ssp"
+                android:id="@+id/everyProductAccording"
+                app:layout_constraintTop_toTopOf="parent"
+                android:includeFontPadding="false"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your subscription automatically renews unless cancelled."
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="10sp"
+                android:layout_marginTop="16dp"
+                android:id="@+id/subsTextview"
+                app:layout_constraintTop_toBottomOf="@+id/everyProductAccording"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/red"
+                android:gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your subscription will auto-renew unless canceled at least 24 hours before renewal. Manage or cancel anytime in Google Play Store settings."
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_6ssp"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:id="@+id/subssubTextview"
+                app:layout_constraintTop_toBottomOf="@+id/subsTextview"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:gravity="center"
+
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No free trial included."
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:id="@+id/noFreeTrailTextview"
+                app:layout_constraintTop_toBottomOf="@+id/subssubTextview"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:gravity="center"
+
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:text="Continue"
+                android:textSize="@dimen/_13ssp"
+                android:background="@drawable/btn_add_text_ok_bg"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/noFreeTrailTextview"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:id="@+id/startedBtn"
+                android:layout_marginTop="9dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/startedBtn"
+                android:layout_marginEnd="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_use"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/free_add_terms_text_coloe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/_10ssp"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="14dp"
+                    android:textColor="@color/free_add_terms_text_coloe"
+                    android:id="@+id/privacyPolicyBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/_10ssp"
+                    android:layout_marginStart="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/red"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel Anytime"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="14dp"
+                    android:textColor="@color/free_add_terms_text_coloe"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/restoreBtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

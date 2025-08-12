@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".editModule.AllEditImagesActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/backButton"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:id="@+id/clearButton"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:paddingBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/docsign"
+            android:paddingStart="18dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/toolbar_title_color"
+            android:textSize="@dimen/_14ssp"
+            android:id="@+id/toolbarTitle"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:src="@drawable/main_delete_icon" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/selectAllBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:visibility="visible"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="5dp"-->
+<!--                android:layout_marginEnd="11dp"-->
+<!--                android:src="@drawable/select_all_filter_images" />-->
+
+
+                />
+
+            <ImageButton
+                android:id="@+id/shakeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/shake_item_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="2dp"
+                android:text="@string/select"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/btn_un_select_bg"
+                android:textColor="@color/select_text_un_selected"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="11dp"
+                android:fontFamily="@font/poppins_medium"
+                android:id="@+id/selectAllBtn"/>
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHeight_percent="0.91"
+        tools:listitem="@layout/all_edit_images_item"
+        android:layout_marginStart="10dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/saveBtntv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/btn_add_text_ok_bg"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="28dp"
+        android:paddingBottom="10dp"
+        android:text="@string/save_changes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp" />
+
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/shakeButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Shake Items"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/saveBtntv"-->
+    <!--        android:layout_marginTop="8dp"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

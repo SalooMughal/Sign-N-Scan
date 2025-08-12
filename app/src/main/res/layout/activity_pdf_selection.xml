@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/selectPdfButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select PDF File"/>
+
+    <TextView
+        android:id="@+id/selectedPdfText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No PDF selected"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:visibility="gone"/>
+</LinearLayout>

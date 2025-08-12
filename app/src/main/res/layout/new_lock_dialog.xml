@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_250sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_14ssp"
+    android:layout_marginEnd="@dimen/_14ssp"
+    android:background="@drawable/dailog_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_password"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/splash_bg_color"
+        android:textSize="@dimen/_13ssp"
+        android:layout_marginTop="27dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/title"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:visibility="gone"
+        android:layout_marginTop="11dp"
+        android:background="#6A7278"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@drawable/lock_filed_bg"
+            android:layout_marginStart="@dimen/_9ssp"
+            android:layout_marginTop="@dimen/_23ssp"
+            android:layout_marginEnd="@dimen/_9ssp"
+            android:hint="@string/add_password"
+            android:paddingStart="18dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/filter_text_color"
+            android:textColorHint="@color/filter_text_color"
+            android:id="@+id/passwordEt"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@drawable/lock_filed_bg"
+            android:layout_marginStart="@dimen/_9ssp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:hint="@string/confirm_password"
+            android:paddingStart="18dp"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/filter_text_color"
+            android:textColorHint="@color/filter_text_color"
+            android:id="@+id/confirmPasswordEt"
+            android:layout_marginEnd="@dimen/_9ssp"/>
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/textInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:hintEnabled="true"-->
+<!--            app:hintAnimationEnabled="true"-->
+<!--            android:paddingStart="18dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:paddingEnd="18dp"-->
+<!--            app:boxStrokeColor="@color/red"-->
+<!--            app:boxStrokeErrorColor="@android:color/holo_red_dark"-->
+<!--            app:errorEnabled="true">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/passwordEt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/filter_text_color"-->
+<!--                android:hint="Add Password"-->
+<!--                android:textColorHint="@color/filter_text_color"-->
+<!--                android:background="@drawable/lock_filed_bg"-->
+<!--                />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/confirmtextInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:hintEnabled="true"-->
+<!--            android:paddingStart="18dp"-->
+<!--            android:paddingEnd="18dp"-->
+<!--            app:hintAnimationEnabled="true"-->
+<!--            app:boxStrokeColor="@color/red"-->
+<!--            app:boxStrokeErrorColor="@android:color/holo_red_dark"-->
+<!--            app:errorEnabled="true">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/confirmPasswordEt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/filter_text_color"-->
+<!--                android:hint="Confirm Password"-->
+<!--                android:textColorHint="@color/filter_text_color"-->
+<!--                android:background="@drawable/lock_filed_bg"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        android:background="@drawable/edittext_bg"-->
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:layout_marginTop="@dimen/_33ssp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_weight="0.5"
+            android:text="@string/cancel"
+            android:textSize="@dimen/_13ssp"
+            android:background="@drawable/btn_add_text_cancel_bg"
+            android:textColor="#878787"
+            android:paddingTop="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:id="@+id/cancelBtn"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_weight="0.5"
+            android:text="@string/save_password"
+            android:textSize="@dimen/_13ssp"
+            android:background="@drawable/btn_add_text_ok_bg"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:id="@+id/saveBtn"
+            android:layout_marginStart="5dp"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
